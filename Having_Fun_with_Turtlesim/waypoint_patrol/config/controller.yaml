@@ -1,0 +1,4 @@
+kv: 1.5            # gain kecepatan linear   (v = kv * d)
+kw: 4.0            # gain kecepatan sudut    (w = kw * e)
+tolerance: 0.08    # unit; dianggap tiba (syarat tugas: < 0.1)
+rate: 20.0         # Hz

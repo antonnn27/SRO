@@ -1,0 +1,14 @@
+<launch>
+  <arg name="auto_start" default="true"/>
+
+  <node pkg="turtlesim" type="turtlesim_node" name="turtlesim" output="screen"/>
+
+  <node pkg="waypoint_patrol" type="waypoint_controller.py" name="waypoint_controller" output="screen">
+    <rosparam command="load" file="$(find waypoint_patrol)/config/controller.yaml"/>
+  </node>
+
+  <node pkg="waypoint_patrol" type="mission_manager.py" name="mission_manager" output="screen">
+    <rosparam command="load" file="$(find waypoint_patrol)/config/waypoints.yaml"/>
+    <param name="auto_start" value="$(arg auto_start)"/>
+  </node>
+</launch>
