@@ -1,2 +1,0 @@
-# SRO
-Sistem Robot Otonom
